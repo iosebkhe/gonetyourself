@@ -1,0 +1,21 @@
+@use "../abstracts/" as *;
+
+.feature {
+  text-align: center;
+  padding: 10rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+
+  &__heading-inner {
+    font-size: $fs-xl-3;
+    font-weight: 800;
+  }
+
+  &__text {
+    font-size: $fs-large;
+    padding: 0 2rem;
+  }
+}

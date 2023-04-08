@@ -1,0 +1,22 @@
+@use "../abstracts/" as *;
+
+.expertise {
+  // padding: 3rem;
+
+  &__text {
+    margin: 4rem 0 6rem 0;
+    text-align: center;
+    color: white;
+  }
+
+  &__video {
+    margin-bottom: 4rem;
+    &-title {
+      text-align: center;
+      font-size: $fs-xl-1;
+      color: white;
+      line-height: 1em;
+      padding-top: 1rem;
+    }
+  }
+}

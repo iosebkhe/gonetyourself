@@ -5,7 +5,7 @@ $color-green: #76a059;
 $color-green-hover: rgba(118, 160, 89, 0.76);
 $color-grey: #666;
 $color-grey-1: #ddd;
-$color-gray-2: #d8d8d8;
+$color-grey-2: #d8d8d8;
 
 $radial-gr-blue: radial-gradient(circle at center, #394673 0%, #000000 100%);
 $radial-gr-grey: radial-gradient(circle at center, #ffffff 0%, #d8d8d8 100%);
@@ -45,17 +45,50 @@ html {
 
 body {
   font-family: "Darker Grotesque", sans-serif;
+  font-size: $fs-large;
+  font-weight: 500;
   line-height: 1;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  // align-items: center;
-  justify-content: space-between;
 }
 
 img {
   display: block;
   width: 100%;
+}
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary,
+.heading-base {
+  font-weight: 700;
+}
+
+.heading-primary {
+  font-size: $fs-3xl;
+  line-height: 0.9em;
+}
+
+.heading-secondary {
+  font-size: $fs-2xl;
+}
+
+.heading-tertiary {
+  text-align: center;
+  font-size: $fs-xl-3;
+  color: $color-green;
+  text-transform: uppercase;
+}
+
+.heading-tertiary--white {
+  color: white;
+}
+
+.heading-base {
+  font-size: $fs-large-3;
+}
+
+.heading-small {
+  font-size: $fs-large;
+  text-transform: uppercase;
 }
 
 .container {

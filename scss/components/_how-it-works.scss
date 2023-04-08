@@ -1,0 +1,30 @@
+@use "../abstracts/" as *;
+
+.how {
+  padding: 10rem 0;
+  text-align: center;
+
+  &__heading-box {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 5rem;
+  }
+
+  &__steps {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  &__step {
+    font-size: $fs-medium;
+    line-height: 2.3rem;
+
+    &-icon {
+      display: inline-block;
+      padding: 1rem 0;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.testimonials {
+  position: relative;
+  padding: 8rem 0 6rem 0;
+  &__text {
+    text-align: center;
+    line-height: 1.4em;
+    margin-bottom: 5rem;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+
+    &-prev {
+      left: 0;
+    }
+
+    &-next {
+      right: 0;
+    }
+  }
+}
