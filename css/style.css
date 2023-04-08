@@ -1,0 +1,37 @@
+.header {
+  height: 8rem;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Darker Grotesque", sans-serif;
+  line-height: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.container {
+  width: 80%;
+  max-width: 108rem;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=style.css.map */
