@@ -1,0 +1,39 @@
+@use "../abstracts" as *;
+
+.footer {
+  &__address {
+    padding: 4rem 0 2rem 0;
+
+    display: grid;
+    gap: 3rem;
+
+    &-item {
+      &--text {
+        font-size: $fs-medium-1;
+        margin-top: 1rem;
+      }
+
+      & > * {
+        display: flex;
+        flex-direction: column;
+        gap: 1.9rem;
+      }
+
+      a {
+        margin-left: 0.5rem;
+      }
+    }
+
+    @include respond-to(large) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__copy {
+    font-size: $fs-smallest;
+    font-weight: 700;
+    line-height: 2.3rem;
+    color: $color-grey;
+    padding: 0.5rem 0 0.2rem 0;
+  }
+}

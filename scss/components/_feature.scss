@@ -9,6 +9,10 @@
   justify-content: center;
   gap: 3rem;
 
+  @include respond-to(medium) {
+    padding: 10rem 5rem;
+  }
+
   &__heading-inner {
     font-size: $fs-xl-3;
     font-weight: 800;

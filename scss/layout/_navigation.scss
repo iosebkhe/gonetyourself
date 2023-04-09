@@ -8,22 +8,47 @@
 
   &__logo {
     width: 14.5rem;
+
+    @include respond-to(large) {
+      width: 23.4rem;
+    }
+  }
+
+  &__icon {
+    cursor: pointer;
+
+    @include respond-to(large) {
+      display: none;
+    }
   }
 
   &__list {
+    width: 100%;
     border-top: 0.3rem solid $color-blue;
+    background-color: white;
     padding: 1.5rem;
     position: absolute;
     left: 50%;
     top: 100%;
     transform: translateX(-50%);
-    width: 100%;
-    list-style: none;
-    transition: max-height 4000ms ease;
-    display: none;
-  }
+    transition: max-height 400ms ease, opacity 200ms ease;
+    z-index: 10000;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
 
-  &__item {
+    @include respond-to(large) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2.2rem;
+      border-top: none;
+      position: unset;
+      left: auto;
+      top: auto;
+      transform: translateX(0);
+      width: auto;
+    }
   }
 
   &__link {
@@ -38,6 +63,94 @@
     &:hover {
       background-color: rgba($color: #000000, $alpha: 0.03);
       opacity: 0.7;
+    }
+
+    @include respond-to(large) {
+      padding: 0;
+      border-bottom: none;
+      font-size: $fs-large-2;
+      font-weight: 700;
+
+      &:hover {
+        background-color: transparent;
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+.footer__nav {
+  position: relative;
+  padding: 1rem 0 1.5rem 0;
+  background-color: $color-grey-2;
+
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-icon {
+    margin-left: auto;
+    cursor: pointer;
+
+    @include respond-to(large) {
+      display: none;
+    }
+  }
+
+  &-list {
+    border-top: 0.3rem solid $color-blue;
+    background-color: $color-grey-2;
+    padding: 5%;
+    position: absolute;
+    left: 50%;
+    top: auto;
+    bottom: 0;
+    transform: translate(-50%, -15%) scaleY(0);
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 400ms ease;
+    transform-origin: 0 100%;
+    overflow: hidden;
+
+    @include respond-to(large) {
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2.2rem;
+      box-shadow: none;
+      border-top: none;
+      position: unset;
+      left: auto;
+      top: auto;
+      transform: translateX(0);
+      width: auto;
+    }
+  }
+
+  &-link {
+    font-size: $fs-large-1;
+    font-weight: 600;
+    display: block;
+    text-decoration: none;
+    color: $color-green;
+    padding: 1rem 5%;
+    border-bottom: 0.1rem solid rgba($color: #000000, $alpha: 0.03);
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+      background-color: rgba($color: #000000, $alpha: 0.03);
+      opacity: 0.7;
+    }
+
+    @include respond-to(large) {
+      border-bottom: none;
+      padding: 0;
+      &:hover {
+        background-color: transparent;
+        opacity: 0.7;
+      }
     }
   }
 }

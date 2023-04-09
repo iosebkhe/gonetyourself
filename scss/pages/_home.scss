@@ -5,6 +5,17 @@
   padding: 6rem 5rem;
 }
 
+.section-feature {
+  @include respond-to(large) {
+    padding: 4rem 0;
+
+    background-image: url("../../assets/video-light.png");
+    background-size: 15% auto;
+    background-position: right 0px bottom 0px;
+    background-repeat: no-repeat;
+  }
+}
+
 .section-expertise {
   background-image: $radial-gr-blue;
   padding: 8rem 0;
@@ -12,4 +23,23 @@
 
 .section-testimonials {
   background-image: $radial-gr-grey;
+  padding: 8rem 0 6rem 0;
+}
+
+.section-how {
+  @include respond-to(large) {
+    background-image: url("../../assets/sillouette-transparent.png");
+    background-size: 31% auto;
+    background-position: left bottom 0px;
+    background-repeat: no-repeat;
+  }
+}
+
+.section-contact {
+  background-image: $radial-gr-grey;
+  padding: 6rem 0 10rem 0;
+
+  @include respond-to(medium) {
+    padding: 10rem 5rem;
+  }
 }

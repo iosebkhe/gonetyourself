@@ -5,6 +5,10 @@
   overflow: hidden;
   height: 100vh;
 
+  @include respond-to(large) {
+    height: 75vh;
+  }
+
   &__content {
     padding: 6rem 0 20rem 0;
     color: white;
@@ -14,6 +18,14 @@
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
+
+    @include respond-to(medium) {
+      padding-top: 20rem;
+    }
+
+    @include respond-to(large) {
+      padding-top: 17rem;
+    }
   }
 
   &__text {
@@ -30,6 +42,13 @@
     align-items: center;
     gap: 3rem;
     padding: 3rem 0;
+
+    @include respond-to(large) {
+      padding: 2% 0;
+      flex-direction: row;
+      justify-content: center;
+      gap: 10%;
+    }
   }
 
   &__skew {
@@ -39,5 +58,4 @@
     height: 10rem;
     transform: scale(-1, 1);
   }
-  border-bottom: 0.1rem solid blueviolet;
 }

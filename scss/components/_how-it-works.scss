@@ -13,9 +13,17 @@
 
   &__steps {
     list-style: none;
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 3rem;
+
+    @include respond-to(smallest) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond-to(large) {
+      grid-template-columns: repeat(5, 15.6%);
+      justify-content: center;
+    }
   }
 
   &__step {

@@ -9,8 +9,17 @@
     color: white;
   }
 
+  &__video-box {
+    display: grid;
+    gap: 4rem;
+
+    @include respond-to(large) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
   &__video {
-    margin-bottom: 4rem;
+    // margin-bottom: 4rem;
     &-title {
       text-align: center;
       font-size: $fs-xl-1;

@@ -27,8 +27,8 @@
         <span class="nav-header__icon">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
+            width="28"
+            height="28"
             fill="#2EA3F2"
             viewBox="0 0 256 256"
           >
@@ -40,7 +40,7 @@
 
         <ul class="nav-header__list">
           <li class="nav-header__item">
-            <a href="" class="nav-header__link">Home</a>
+            <a href="" class="nav-header__link active">Home</a>
           </li>
           <li class="nav-header__item">
             <a href="" class="nav-header__link">Our Work</a>
@@ -71,8 +71,8 @@
               Creating thousands of videos for the world’s top brands
             </p>
             <div class="hero__cta">
-              <button class="btn brn-primary">Learn More</button>
-              <button class="btn brn-primary">Get in Touch</button>
+              <button class="btn btn-primary">Learn More</button>
+              <button class="btn btn-primary">Get in Touch</button>
             </div>
           </div>
           <div class="hero__skew">
@@ -88,6 +88,7 @@
           </div>
         </div>
       </section>
+
       <section class="section-feature">
         <div class="feature container">
           <h3 class="heading-tertiary">Why we're different</h3>
@@ -100,24 +101,84 @@
           </p>
         </div>
       </section>
+
       <section class="section-slider">
-        <div class="slider container">
-          <h3 class="heading-tertiary container slider__heading">
-            Approved Supplier
-          </h3>
-          <div class="slider__wrapper">
-            <img src="./assets/logos/logo-alaska.png" alt="Slide 1" />
-            <img src="./assets/logos/logo-amazon.png" alt="Slide 2" />
-            <img src="./assets/logos/logo-docusign.png" alt="Slide 3" />
-            <img src="./assets/logos/logo-microsoft.png" alt="Slide 4" />
-            <img src="./assets/logos/logo-sap.png" alt="Slide 5" />
-            <img src="./assets/logos/logo-tmobile.png" alt="Slide 6" />
-            <img src="./assets/logos/logo-virginia.png" alt="Slide 7" />
+        <div class="slider__container container">
+          <div class="slider">
+            <h3 class="heading-tertiary container slider__heading">
+              Approved Supplier
+            </h3>
+            <div class="slider__wrapper">
+              <img
+                class="slide-logo"
+                src="./assets/logos/logo-alaska.png"
+                alt="Slide 1"
+              />
+              <img
+                class="slide-logo"
+                src="./assets/logos/logo-amazon.png"
+                alt="Slide 2"
+              />
+              <img
+                class="slide-logo"
+                src="./assets/logos/logo-docusign.png"
+                alt="Slide 3"
+              />
+              <img
+                class="slide-logo"
+                src="./assets/logos/logo-microsoft.png"
+                alt="Slide 4"
+              />
+              <img
+                class="slide-logo"
+                src="./assets/logos/logo-sap.png"
+                alt="Slide 5"
+              />
+              <img
+                class="slide-logo"
+                src="./assets/logos/logo-tmobile.png"
+                alt="Slide 6"
+              />
+              <img
+                class="slide-logo"
+                src="./assets/logos/logo-virginia.png"
+                alt="Slide 7"
+              />
+            </div>
           </div>
-          <button class="slider__button slider__button-prev">&larr;</button>
-          <button class="slider__button slider__button-next">&rarr;</button>
+          <button
+            class="btn-slider btn-slider--prev btn-slider-logo btn-slider-logo--prev"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              fill="#333333"
+              viewBox="0 0 256 256"
+            >
+              <path
+                d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"
+              ></path>
+            </svg>
+          </button>
+          <button
+            class="btn-slider btn-slider--next btn-slider-logo btn-slider-logo--next"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              fill="#333333"
+              viewBox="0 0 256 256"
+            >
+              <path
+                d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"
+              ></path>
+            </svg>
+          </button>
         </div>
       </section>
+
       <section class="section-expertise">
         <div class="expertise container">
           <div class="expertise__text-box">
@@ -136,102 +197,195 @@
           <div class="expertise__video-box">
             <div class="expertise__video video">
               <a href="https://player.vimeo.com/video/332541254">
-                <img
-                  src="./assets/video-cover-1.png"
-                  alt="first video thumbnail"
-                />
+                <picture>
+                  <source
+                    srcset="./assets/video-cover-1-webp.webp"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="./assets/video-cover-1.png"
+                    type="image/png"
+                  />
+                  <img
+                    src="./assets/video-cover-1.png"
+                    alt="first video thumbnail"
+                  />
+                </picture>
               </a>
               <p class="expertise__video-title">Premium</p>
             </div>
 
             <div class="expertise__video video">
               <a href="https://player.vimeo.com/video/219714938">
-                <img
-                  src="./assets/video-cover-2.png"
-                  alt="second video thumbnail"
-                />
+                <picture>
+                  <source
+                    srcset="./assets/video-cover-2-webp.webp"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="./assets/video-cover-2.png"
+                    type="image/png"
+                  />
+                  <img
+                    src="./assets/video-cover-2.png"
+                    alt="second video thumbnail"
+                  />
+                </picture>
               </a>
               <p class="expertise__video-title">On-Location</p>
             </div>
 
             <div class="expertise__video video">
               <a href="https://player.vimeo.com/video/542740225">
-                <img
-                  src="./assets/video-cover-3.png"
-                  alt="third video thumbnail"
-                />
+                <picture>
+                  <source
+                    srcset="./assets/video-cover-3-webp.webp"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="./assets/video-cover-3.png"
+                    type="image/png"
+                  />
+                  <img
+                    src="./assets/video-cover-3.png"
+                    alt="third video thumbnail"
+                  />
+                </picture>
               </a>
               <p class="expertise__video-title">Animation</p>
             </div>
 
             <div class="expertise__video video">
               <a href="https://player.vimeo.com/video/435851889">
-                <img
-                  src="./assets/video-cover-4.png"
-                  alt="fourth video thumbnail"
-                />
+                <picture>
+                  <source
+                    srcset="./assets/video-cover-4-webp.webp"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="./assets/video-cover-4.png"
+                    type="image/png"
+                  />
+                  <img
+                    src="./assets/video-cover-4.png"
+                    alt="fourth video thumbnail"
+                  />
+                </picture>
               </a>
               <p class="expertise__video-title">Edit-Only</p>
             </div>
 
             <div class="expertise__video video">
               <a href="https://player.vimeo.com/video/266212936">
-                <img
-                  src="./assets/video-cover-5.png"
-                  alt="fifth video thumbnail"
-                />
+                <picture>
+                  <source
+                    srcset="./assets/video-cover-5-webp.webp"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="./assets/video-cover-5.png"
+                    type="image/png"
+                  />
+                  <img
+                    src="./assets/video-cover-5.png"
+                    alt="fifth video thumbnail"
+                  />
+                </picture>
               </a>
               <p class="expertise__video-title">Studio Memberships</p>
             </div>
 
             <div class="expertise__video video">
               <a href="https://player.vimeo.com/video/391046579">
-                <img
-                  src="./assets/video-cover-6.png"
-                  alt="sixth video thumbnail"
-                />
+                <picture>
+                  <source
+                    srcset="./assets/video-cover-6-webp.webp"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="./assets/video-cover-6.png"
+                    type="image/png"
+                  />
+                  <img
+                    src="./assets/video-cover-6.png"
+                    alt="sixth video thumbnail"
+                  />
+                </picture>
               </a>
               <p class="expertise__video-title">Livestreams</p>
             </div>
           </div>
         </div>
       </section>
+
       <section class="section-testimonials">
-        <div class="testimonials container">
-          <div class="testimonials__text-box">
-            <h3 class="heading-tertiary">Testimonials</h3>
-            <p class="testimonials__text">
-              We work with some awesome people. Here's what they have to say
-              about us:
-            </p>
+        <div class="container">
+          <div class="testimonials">
+            <div class="testimonials__text-box">
+              <h3 class="heading-tertiary">Testimonials</h3>
+              <p class="testimonials__text">
+                We work with some awesome people. Here's what they have to say
+                about us:
+              </p>
+            </div>
+
+            <div class="testimonials__wrapper">
+              <img
+                class="testimonial-img"
+                src="./assets/testimonials/testimonial-charlie.png"
+                alt="Slide 1"
+              />
+              <img
+                class="testimonial-img"
+                src="./assets/testimonials/testimonial-noelle.png"
+                alt="Slide 4"
+              />
+              <img
+                class="testimonial-img"
+                src="./assets/testimonials/testimonial-jodi.png"
+                alt="Slide 3"
+              />
+              <img
+                class="testimonial-img"
+                src="./assets/testimonials/testimonial-ian.png"
+                alt="Slide 2"
+              />
+            </div>
           </div>
 
-          <div class="testimonials__wrapper">
-            <img
-              src="./assets/testimonials/testimonial-charlie.png"
-              alt="Slide 1"
-            />
-            <img
-              src="./assets/testimonials/testimonial-ian.png"
-              alt="Slide 2"
-            />
-            <img
-              src="./assets/testimonials/testimonial-jodi.png"
-              alt="Slide 3"
-            />
-            <img
-              src="./assets/testimonials/testimonial-noelle.png"
-              alt="Slide 4"
-            />
-          </div>
-          <button class="testimonials__button testimonials__button-prev">
-            &larr;
+          <button
+            class="btn-slider btn-slider--prev btn-slider-testimonial btn-slider-testimonial--prev"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              fill="#333333"
+              viewBox="0 0 256 256"
+            >
+              <path
+                d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"
+              ></path>
+            </svg>
           </button>
-          <button class="testimonials__button testimonials__button-next">
-            &rarr;
+          <button
+            class="btn-slider btn-slider--next btn-slider-testimonial btn-slider-testimonial--next"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              fill="#333333"
+              viewBox="0 0 256 256"
+            >
+              <path
+                d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"
+              ></path>
+            </svg>
           </button>
         </div>
       </section>
+
       <section class="section-how">
         <div class="how container">
           <div class="how__heading-box">
@@ -346,7 +500,131 @@
           </ul>
         </div>
       </section>
+
+      <section class="section-our-team">
+        <div class="our-team__blurred">
+          <div class="our-team__text-box container">
+            <h2 class="heading-secondary">Our Studio</h2>
+            <p class="our-team__text">
+              Conveniently located in the Seattle Convention Center in downtown
+              Seattle, our studio has both green and white CYC walls, podcast
+              capabilities, and a spacious greenroom.
+            </p>
+          </div>
+        </div>
+        <div class="our-team__studio"></div>
+      </section>
+
+      <section class="section-contact">
+        <div class="contact container">
+          <h4 class="contact__text">
+            Talk to a production expert about your next project. Fill out the
+            form to schedule some time with us:
+          </h4>
+          <form
+            class="form"
+            action="/"
+            method="post"
+            enctype="multipart/form-data"
+            novalidate
+          >
+            <div class="form__name">
+              <input
+                class="input input__name-first"
+                type="text"
+                name="firstName"
+                placeholder="First Name"
+              />
+              <input
+                class="input input__name-last"
+                type="text"
+                name="lastName"
+                placeholder="Last Name"
+              />
+            </div>
+
+            <input
+              class="input input-email"
+              type="email"
+              name="email"
+              placeholder="Work Email"
+            />
+            <input
+              class="input input-tel"
+              type="tel"
+              name="tel"
+              placeholder="Phone"
+            />
+
+            <button class="btn btn-medium form-btn">Submit</button>
+          </form>
+        </div>
+      </section>
     </main>
-    <footer></footer>
+    <footer class="footer">
+      <ul class="footer__address container">
+        <li class="footer__address-item">
+          <h4 class="heading-base">Seattle Studio</h4>
+          <p class="footer__address-item--text">
+            Washington St. Convention Center 705 Pike Street, Seattle, WA 98101
+          </p>
+        </li>
+        <li class="footer__address-item">
+          <h4 class="heading-base">Boise Studio</h4>
+          <p class="footer__address-item--text">
+            943 W Overland Rd., Suite 153, Meridian, ID 83642
+          </p>
+        </li>
+        <li class="footer__address-item">
+          <h4 class="heading-base">Get In Touch</h4>
+          <p class="footer__address-item--text">
+            <span>
+              Email:<a href="mailto:info@gonetyourself.com"
+                >info@gonetyourself.com</a
+              >
+            </span>
+            <span>Phone: 206.735.3135</span>
+          </p>
+        </li>
+      </ul>
+      <nav class="footer__nav">
+        <div class="container footer__nav-wrapper">
+          <span class="footer__nav-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              fill="#7EBEC5"
+              viewBox="0 0 256 256"
+            >
+              <path
+                d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"
+              ></path>
+            </svg>
+          </span>
+
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item">
+              <a href="" class="footer__nav-link">Home</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="" class="footer__nav-link">Our Work</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="" class="footer__nav-link">The Team</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="" class="footer__nav-link">Contact</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="" class="footer__nav-link">Members Login</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="footer__copy container">
+        &copy; 2022 GoNetYourself, Inc. All Rights Reserved
+      </div>
+    </footer>
   </body>
 </html>

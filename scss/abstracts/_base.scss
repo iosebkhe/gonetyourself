@@ -1,3 +1,5 @@
+@use "./media-query" as *;
+
 // Colors and gradients
 $color-blue: #2ea3f2;
 $color-glacier: #7ebec5;
@@ -6,6 +8,7 @@ $color-green-hover: rgba(118, 160, 89, 0.76);
 $color-grey: #666;
 $color-grey-1: #ddd;
 $color-grey-2: #d8d8d8;
+$color-grey-3: #999999;
 
 $radial-gr-blue: radial-gradient(circle at center, #394673 0%, #000000 100%);
 $radial-gr-grey: radial-gradient(circle at center, #ffffff 0%, #d8d8d8 100%);
@@ -55,6 +58,23 @@ img {
   width: 100%;
 }
 
+input {
+  display: inline-block;
+  width: 100%;
+  border: 0;
+  outline: none;
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: $color-blue;
+}
+
+ul {
+  list-style: none;
+}
+
 .heading-primary,
 .heading-secondary,
 .heading-tertiary,
@@ -69,6 +89,8 @@ img {
 
 .heading-secondary {
   font-size: $fs-2xl;
+  color: white;
+  text-transform: uppercase;
 }
 
 .heading-tertiary {
@@ -84,6 +106,7 @@ img {
 
 .heading-base {
   font-size: $fs-large-3;
+  color: $color-green;
 }
 
 .heading-small {
@@ -92,7 +115,25 @@ img {
 }
 
 .container {
+  position: relative;
   width: 80%;
   max-width: 108rem;
   margin: 0 auto;
+}
+
+@include respond-to(large) {
+  .active {
+    color: $color-green !important;
+  }
+}
+
+.active-nav-header {
+  max-height: 20.8rem !important;
+  opacity: 1 !important;
+}
+
+.active-nav-footer {
+  // max-height: 28rem !important;
+  // opacity: 1 !important;
+  transform: translate(-50%, -15%) scaleY(1) !important;
 }

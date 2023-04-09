@@ -1,6 +1,11 @@
 .slider {
-  position: relative;
+  // position: relative;
   overflow: hidden;
+  // background-color: rebeccapurple;
+
+  &__container {
+    width: 100%;
+  }
 
   &__heading {
     line-height: 2.38rem;
@@ -8,37 +13,18 @@
   }
 
   &__wrapper {
+    width: 100%;
+    max-width: 108rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: nowrap;
-    transition: transform 0.5s ease-out;
+    transition: all 500ms ease-out;
+    // gap: 10rem;
 
-    img {
-      width: calc(100% / 3); /* 3 slides visible on larger screens */
-    }
-
-    @media screen and (max-width: 640px) {
-      img {
-        width: 100%; /* 1 slide visible on mobile */
-      }
+    & > img {
+      position: relative;
+      width: 22.2rem;
+      transition: all 400ms ease-out;
     }
   }
-}
-
-.slider__button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: transparent;
-  border: none;
-  color: white;
-  font-size: 2rem;
-  cursor: pointer;
-}
-.slider__button-prev {
-  left: 0;
-}
-.slider__button-next {
-  right: 0;
 }

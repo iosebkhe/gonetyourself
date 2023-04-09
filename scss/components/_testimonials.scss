@@ -1,33 +1,26 @@
 .testimonials {
-  position: relative;
-  padding: 8rem 0 6rem 0;
+  // position: relative;
+  overflow: hidden;
+  // background-color: rebeccapurple;
+
   &__text {
+    padding-top: 2rem;
     text-align: center;
     line-height: 1.4em;
     margin-bottom: 5rem;
   }
 
   &__wrapper {
+    width: 100%;
+    max-width: 108rem;
     display: flex;
     align-items: center;
-  }
+    justify-content: center;
 
-  &__button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: transparent;
-    border: none;
-    color: white;
-    font-size: 2rem;
-    cursor: pointer;
-
-    &-prev {
-      left: 0;
-    }
-
-    &-next {
-      right: 0;
+    & > img {
+      width: 34.7rem;
+      // padding: 0 1.3rem;
+      transition: all 400ms ease-out;
     }
   }
 }

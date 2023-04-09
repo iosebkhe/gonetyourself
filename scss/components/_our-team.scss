@@ -1,0 +1,38 @@
+@use "../abstracts/" as *;
+
+.our-team {
+  &__blurred {
+    padding: 10rem 0;
+    background-image: url("../../assets/main-franchise.jpg");
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__text-box {
+    padding: 10rem 0 6rem 0;
+
+    @include respond-to(large) {
+      padding: 10rem 5rem 6rem 5rem;
+    }
+  }
+
+  &__text {
+    padding-top: 2rem;
+    color: white;
+    line-height: 2.3rem;
+  }
+
+  &__studio {
+    padding: 15rem 0;
+    background-image: url("../../assets/main-studio.jpg");
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: none;
+
+    @include respond-to(large) {
+      display: block;
+    }
+  }
+}
