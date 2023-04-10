@@ -351,6 +351,7 @@ ul {
   align-items: center;
   justify-content: center;
   border-radius: 4rem;
+  z-index: 200;
 }
 .btn-slider--prev {
   left: -2rem;
@@ -601,9 +602,6 @@ ul {
   transition: all 400ms ease-out;
 }
 
-.testimonials {
-  overflow: hidden;
-}
 .testimonials__text {
   padding-top: 2rem;
   text-align: center;
@@ -611,15 +609,26 @@ ul {
   margin-bottom: 5rem;
 }
 .testimonials__wrapper {
+  max-width: 50rem;
+  height: 20rem;
+  position: relative;
+  overflow: hidden;
+}
+.testimonials__wrapper > img {
+  position: absolute;
+  top: 0;
+  height: 20rem;
   width: 100%;
-  max-width: 108rem;
+  object-fit: contain;
+  transition: all 1000ms ease-out;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.testimonials__wrapper > img {
-  width: 34.7rem;
-  transition: all 400ms ease-out;
+.testimonials__wrapper--outer {
+  max-width: 50rem;
+  margin: 0 auto;
+  position: relative;
 }
 
 .section-slider {

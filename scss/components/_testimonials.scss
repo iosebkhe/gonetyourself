@@ -1,6 +1,6 @@
 .testimonials {
   // position: relative;
-  overflow: hidden;
+  // overflow: hidden;
   // background-color: rebeccapurple;
 
   &__text {
@@ -11,16 +11,27 @@
   }
 
   &__wrapper {
-    width: 100%;
-    max-width: 108rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    max-width: 50rem;
+    height: 20rem;
+    position: relative;
+    overflow: hidden;
 
     & > img {
-      width: 34.7rem;
-      // padding: 0 1.3rem;
-      transition: all 400ms ease-out;
+      position: absolute;
+      top: 0;
+      height: 20rem;
+      width: 100%;
+      object-fit: contain;
+      transition: all 1000ms ease-out;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &--outer {
+      max-width: 50rem;
+      margin: 0 auto;
+      position: relative;
     }
   }
 }

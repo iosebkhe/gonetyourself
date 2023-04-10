@@ -73,7 +73,7 @@ const sliderTestimonial = function () {
   //default slide
   const goToSlide = function (slide) {
     slideTestimonials.forEach(function (s, index) {
-      s.style.transform = `translateX(${50 * (index - slide)}%)`;
+      s.style.transform = `translateX(${100 * (index - slide)}%)`;
     });
   };
 
@@ -107,6 +107,7 @@ const sliderTestimonial = function () {
 };
 sliderTestimonial();
 
+// mobile navigation bar handling
 headerMobNavBtn.addEventListener("click", function () {
   document
     .querySelector(".nav-header__list")
