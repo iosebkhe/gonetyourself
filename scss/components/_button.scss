@@ -85,3 +85,15 @@
     transform: translateY(-200%);
   }
 }
+
+.modal__btn {
+  border: none;
+  position: absolute;
+  top: -1.5rem;
+  right: -1.5rem;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  overflow: hidden;
+  cursor: pointer;
+}

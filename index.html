@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Armata&family=Darker+Grotesque:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/style.css" />
@@ -196,7 +196,7 @@
           </div>
           <div class="expertise__video-box">
             <div class="expertise__video video">
-              <a href="https://player.vimeo.com/video/332541254">
+              <div id="video1">
                 <picture>
                   <source
                     srcset="./assets/video-cover-1-webp.webp"
@@ -211,12 +211,12 @@
                     alt="first video thumbnail"
                   />
                 </picture>
-              </a>
-              <p class="expertise__video-title">Premium</p>
+                <p class="expertise__video-title">Premium</p>
+              </div>
             </div>
 
             <div class="expertise__video video">
-              <a href="https://player.vimeo.com/video/219714938">
+              <div id="video2">
                 <picture>
                   <source
                     srcset="./assets/video-cover-2-webp.webp"
@@ -231,12 +231,12 @@
                     alt="second video thumbnail"
                   />
                 </picture>
-              </a>
-              <p class="expertise__video-title">On-Location</p>
+                <p class="expertise__video-title">On-Location</p>
+              </div>
             </div>
 
             <div class="expertise__video video">
-              <a href="https://player.vimeo.com/video/542740225">
+              <div id="video3">
                 <picture>
                   <source
                     srcset="./assets/video-cover-3-webp.webp"
@@ -251,12 +251,12 @@
                     alt="third video thumbnail"
                   />
                 </picture>
-              </a>
-              <p class="expertise__video-title">Animation</p>
+                <p class="expertise__video-title">Animation</p>
+              </div>
             </div>
 
             <div class="expertise__video video">
-              <a href="https://player.vimeo.com/video/435851889">
+              <div id="video4">
                 <picture>
                   <source
                     srcset="./assets/video-cover-4-webp.webp"
@@ -271,12 +271,12 @@
                     alt="fourth video thumbnail"
                   />
                 </picture>
-              </a>
-              <p class="expertise__video-title">Edit-Only</p>
+                <p class="expertise__video-title">Edit-Only</p>
+              </div>
             </div>
 
             <div class="expertise__video video">
-              <a href="https://player.vimeo.com/video/266212936">
+              <div id="video5">
                 <picture>
                   <source
                     srcset="./assets/video-cover-5-webp.webp"
@@ -291,12 +291,12 @@
                     alt="fifth video thumbnail"
                   />
                 </picture>
-              </a>
-              <p class="expertise__video-title">Studio Memberships</p>
+                <p class="expertise__video-title">Studio Memberships</p>
+              </div>
             </div>
 
             <div class="expertise__video video">
-              <a href="https://player.vimeo.com/video/391046579">
+              <div id="video6">
                 <picture>
                   <source
                     srcset="./assets/video-cover-6-webp.webp"
@@ -311,8 +311,8 @@
                     alt="sixth video thumbnail"
                   />
                 </picture>
-              </a>
-              <p class="expertise__video-title">Livestreams</p>
+                <p class="expertise__video-title">Livestreams</p>
+              </div>
             </div>
           </div>
         </div>
@@ -634,5 +634,32 @@
     </footer>
 
     <!-- Modal -->
+    <div class="modal-outer">
+      <div class="modal">
+        <button class="modal__btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            fill="#333333"
+            viewBox="0 0 256 256"
+          >
+            <path
+              d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm37.66,130.34a8,8,0,0,1-11.32,11.32L128,139.31l-26.34,26.35a8,8,0,0,1-11.32-11.32L116.69,128,90.34,101.66a8,8,0,0,1,11.32-11.32L128,116.69l26.34-26.35a8,8,0,0,1,11.32,11.32L139.31,128Z"
+            ></path>
+          </svg>
+        </button>
+        <div class="modal__video">
+          <iframe
+            src=""
+            height="360"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <p class="modal__title">Hear Their Stories</p>
+      </div>
+    </div>
   </body>
 </html>

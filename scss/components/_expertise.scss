@@ -19,7 +19,8 @@
   }
 
   &__video {
-    // margin-bottom: 4rem;
+    cursor: pointer;
+
     &-title {
       text-align: center;
       font-size: $fs-xl-1;
