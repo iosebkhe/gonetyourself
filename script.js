@@ -3,12 +3,34 @@ const slidesLogos = document.querySelectorAll(".slide-logo");
 const btnNextLogo = document.querySelector(".btn-slider-logo--next");
 const btnPrevLogo = document.querySelector(".btn-slider-logo--prev");
 
+const sliderTestimonialContainer = document.querySelector(
+  ".testimonials__wrapper"
+);
+const slideTestimonials = Array.from(
+  document.querySelectorAll(".testimonial-img")
+);
+const btnNextTestimonial = document.querySelector(
+  ".btn-slider-testimonial--next"
+);
+const btnPrevTestimonial = document.querySelector(
+  ".btn-slider-testimonial--prev"
+);
+
+// navigation buttons
+const headerMobNavBtn = document.querySelector(".nav-header__icon");
+const footerMobNavBtn = document.querySelector(".footer__nav-icon");
+
 const slideLogosArr = Array.from(slidesLogos);
 const firstProduct = slideLogosArr[0];
-const firstProductWidth = 222;
-console.dir(firstProduct);
+const firstElStyle = window.getComputedStyle(firstProduct);
+const elMarginRight = parseInt(firstElStyle.marginRight, 10);
+console.dir(elMarginRight);
+const elWidth = firstProduct.getBoundingClientRect().width;
+console.log(elWidth);
+const firstProductWidth = elWidth + elMarginRight;
 console.log(firstProductWidth);
 
+// Logo slider
 function scrollSlider(forward) {
   if (forward) {
     sliderLogoContainer.scrollLeft += firstProductWidth;
@@ -34,67 +56,6 @@ btnNextLogo.addEventListener("click", function () {
 btnPrevLogo.addEventListener("click", function () {
   scrollSlider(false);
 });
-
-const sliderTestimonialContainer = document.querySelector(
-  ".testimonials__wrapper"
-);
-const slideTestimonials = Array.from(
-  document.querySelectorAll(".testimonial-img")
-);
-const btnNextTestimonial = document.querySelector(
-  ".btn-slider-testimonial--next"
-);
-const btnPrevTestimonial = document.querySelector(
-  ".btn-slider-testimonial--prev"
-);
-
-// navigation buttons
-const headerMobNavBtn = document.querySelector(".nav-header__icon");
-const footerMobNavBtn = document.querySelector(".footer__nav-icon");
-
-// logo slider
-const slider = function () {
-  let currentSlide = 0;
-  const maxSlide = slidesLogos.length;
-
-  /////////////functions
-
-  //default slide
-  const goToSlide = function (slide) {
-    slidesLogos.forEach(function (s, index) {
-      s.style.transform = `translateX(${50 * (index - slide)}%)`;
-    });
-  };
-
-  //going next slide
-  const nextSlide = function () {
-    if (currentSlide === maxSlide - 1) {
-      currentSlide = 0;
-    } else {
-      currentSlide++;
-    }
-
-    goToSlide(currentSlide);
-  };
-
-  //going prev slide
-  const prevSlide = function () {
-    if (currentSlide === 0) {
-      currentSlide = maxSlide - 1;
-    } else {
-      currentSlide--;
-    }
-
-    goToSlide(currentSlide);
-  };
-
-  goToSlide(0);
-
-  //Event handlers
-  btnNextLogo.addEventListener("click", nextSlide);
-  btnPrevLogo.addEventListener("click", prevSlide);
-};
-// slider();
 
 // testimonial slider
 const sliderTestimonial = function () {

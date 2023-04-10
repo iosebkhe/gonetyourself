@@ -2,7 +2,7 @@
   overflow: hidden;
 
   &__container {
-    width: 90rem !important;
+    max-width: 95rem !important;
   }
 
   &__heading {
@@ -22,11 +22,15 @@
     align-items: center;
     justify-content: space-between;
     transition: all 500ms ease-out;
-    gap: 10rem;
+    // gap: 10rem;
     position: relative;
 
+    & > img:not(:last-child) {
+      margin-right: 100px;
+    }
+
     & > img {
-      width: 22.2rem;
+      width: 222px;
       transition: all 400ms ease-out;
     }
   }
