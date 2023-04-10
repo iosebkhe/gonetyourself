@@ -1,10 +1,8 @@
 .slider {
-  // position: relative;
   overflow: hidden;
-  // background-color: rebeccapurple;
 
   &__container {
-    width: 100%;
+    width: 90rem !important;
   }
 
   &__heading {
@@ -13,16 +11,21 @@
   }
 
   &__wrapper {
-    width: 100%;
-    max-width: 108rem;
+    overflow-x: auto;
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+    scroll-behavior: smooth;
+    height: 13rem;
+
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     transition: all 500ms ease-out;
-    // gap: 10rem;
+    gap: 10rem;
+    position: relative;
 
     & > img {
-      position: relative;
       width: 22.2rem;
       transition: all 400ms ease-out;
     }

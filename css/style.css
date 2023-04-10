@@ -582,22 +582,27 @@ ul {
   overflow: hidden;
 }
 .slider__container {
-  width: 100%;
+  width: 90rem !important;
 }
 .slider__heading {
   line-height: 2.38rem;
   padding-bottom: 2rem;
 }
 .slider__wrapper {
-  width: 100%;
-  max-width: 108rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  height: 13rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   transition: all 500ms ease-out;
+  gap: 10rem;
+  position: relative;
+}
+.slider__wrapper::-webkit-scrollbar {
+  width: 0;
 }
 .slider__wrapper > img {
-  position: relative;
   width: 22.2rem;
   transition: all 400ms ease-out;
 }

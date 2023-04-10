@@ -2,6 +2,39 @@ const sliderLogoContainer = document.querySelector(".slider__wrapper");
 const slidesLogos = document.querySelectorAll(".slide-logo");
 const btnNextLogo = document.querySelector(".btn-slider-logo--next");
 const btnPrevLogo = document.querySelector(".btn-slider-logo--prev");
+
+const slideLogosArr = Array.from(slidesLogos);
+const firstProduct = slideLogosArr[0];
+const firstProductWidth = 222;
+console.dir(firstProduct);
+console.log(firstProductWidth);
+
+function scrollSlider(forward) {
+  if (forward) {
+    sliderLogoContainer.scrollLeft += firstProductWidth;
+    if (
+      sliderLogoContainer.scrollLeft + sliderLogoContainer.clientWidth >=
+      sliderLogoContainer.scrollWidth
+    ) {
+      sliderLogoContainer.scrollLeft = 0; // scroll back to the first slide logo
+    }
+  } else {
+    sliderLogoContainer.scrollLeft -= firstProductWidth;
+    if (sliderLogoContainer.scrollLeft <= 0) {
+      sliderLogoContainer.scrollLeft =
+        sliderLogoContainer.scrollWidth - sliderLogoContainer.clientWidth; // scroll to the last slide logo
+    }
+  }
+}
+
+btnNextLogo.addEventListener("click", function () {
+  scrollSlider(true);
+});
+
+btnPrevLogo.addEventListener("click", function () {
+  scrollSlider(false);
+});
+
 const sliderTestimonialContainer = document.querySelector(
   ".testimonials__wrapper"
 );
@@ -61,7 +94,7 @@ const slider = function () {
   btnNextLogo.addEventListener("click", nextSlide);
   btnPrevLogo.addEventListener("click", prevSlide);
 };
-slider();
+// slider();
 
 // testimonial slider
 const sliderTestimonial = function () {
